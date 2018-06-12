@@ -48,6 +48,20 @@ function executeCommand(command:string) {
         case "help kill":
             commandResults.innerText = "'kill' is a command that ends processes. Good news- I don't have any processes!";
             break;
+        case "ipconfig":
+            commandResults.innerText = "You are probably connected via WiFi. It's gotta be either that or ethernet.";
+            break;
+        case "ifconfig":
+            commandResults.innerText = "If I were a UNIX system, I'd tell you all about my active internet connections!";
+            break;
+        case "man ipconfig":
+        case "help ipconfig":
+            commandResults.innerText = "'ipconfig' is a Windows utility that will tell you about internet connections.";
+            break;
+        case "man ifconfig":
+        case "help ifconfig":
+            commandResults.innerText = "'ifconfig' is a UNIX utility that will tell you about internet connections.";
+            break;
         default:
             commandResults.innerText = "I didn't quite get that. Try a different command.";
             commandResults.classList.add("error");
